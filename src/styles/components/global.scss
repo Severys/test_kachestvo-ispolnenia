@@ -1,0 +1,35 @@
+body {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 28px;
+    color: white;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    overflow: visible;
+}
+
+a {
+color: white;
+text-decoration: none;
+&:hover{
+    text-decoration: underline;
+}
+}
+.btn {
+    padding: 15px 25px;
+    width: 262px;
+    height: 58px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 25px;
+    background-color: #FF4B4B;
+    box-shadow: 2px 5px 10px #497957;
+}
