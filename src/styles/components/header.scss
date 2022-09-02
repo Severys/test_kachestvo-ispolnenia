@@ -9,6 +9,9 @@
 	&_nav{
 		display: flex;
 		gap: 60px;
+        @media screen and (max-width:480px) {
+            gap: 10px;
+        }
 	}
 
 	&_menu_list {
@@ -23,20 +26,21 @@
 			gap: 39px;
 			top: -29px;
 			left: 0px;
-			padding:33px 64px 57px 64px;
+			padding:33px 64px 57px ;
+            @media screen and (max-width:480px) {
+                padding: 16px 32px 24px ;
+            }
         }
-		&_btn{
-			// margin-bottom: 30px;
-		}
 	}
 	&_burger {
         display: block;
         position: relative;
-		top: 10px;
+		top: 15px;
         width: 30px;
         height: 30px;
         transition: 0.3 s;
         z-index: 2;
+        cursor: pointer;
         &::before {
             content: '';
             position: absolute;

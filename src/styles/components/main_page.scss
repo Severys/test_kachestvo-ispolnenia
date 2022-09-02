@@ -1,16 +1,61 @@
 .main{
 	background-color: #A6C9FF;
 	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
 	
 	&_slider{
 		width: 100%;
 		background-color: #7029CB;
+		position: relative;
+		&::before{
+			content: '';
+			width: 40px;
+			height: 77px;
+			background-color: wheat;
+			background: url(./image/vector.svg) no-repeat;
+			top: 35px;
+			left: 50px;
+			position: absolute;
+			@media screen and (max-width:760px) {
+				left: 25px;
+			}
+			@media screen and (max-width:480px) {
+				display: none;
+			}
+		}
+		&::after{
+			content: '';
+			width: 40px;
+			height: 77px;
+			background-color: wheat;
+			background: url(./image/vector.svg) no-repeat;
+			transform: rotate(180deg);
+			top: 35px;
+			right: 50px;
+			position: absolute;
+			@media screen and (max-width:760px) {
+				right: 25px;
+			}
+			@media screen and (max-width:480px) {
+				display: none;
+			}
+		}
 		&_item {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
 			gap: 32px;
+			@media screen and (max-width:760px) {
+				flex-direction: column;
+				align-items: center;
+				gap: 16px;
+				padding-bottom: 10px;
+				& h1 {
+					margin: 0;
+				}
+			}
 		}
 	}
 	h2 {
@@ -21,26 +66,39 @@
 		grid-template-columns: repeat(7, 1fr);
 		grid-template-rows: 198px 198px;
 		gap: 13px;
-		background-color: #BEB9FF;
-
+		background-color: $bg_color;
+		@media screen and (max-width:480px) {
+			display: flex;
+			flex-direction: column;;
+		}
+		&>div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $ban_color;
+			&::after{
+				content: '1';
+				font-size: 64px;
+			}
+			@media screen and (max-width:480px) {
+				height: 198px;
+			}
+		}
 		
 		&_1 {
-			background-color: #3ADE4B;
 			grid-column-start: 1;
 			grid-column-end: 3;
+			
 		}
 		&_2 {
-			background-color: #3ADE4B;
 			grid-column-start: 3;
 			grid-column-end: 8;
 		}
 		&_3 {
-			background-color: #3ADE4B;
 			grid-column-start: 1;
 			grid-column-end: 7;
 		}
 		&_4 {
-			background-color: #3ADE4B;
 			grid-column-start: 7;
 			grid-column-end: 8;
 
@@ -52,15 +110,25 @@
 		margin: 0 25px 0 25px;
 		border-radius: 30px;
 		padding: 25px;
-		justify-content: space-around;
+		justify-content: space-evenly;
+		gap: 20px;
+		align-self: center;
+		@media screen and (max-width:1000px) {
+			flex-wrap: wrap;
+			align-items: center;
+			width:50%;
+		}
 		&_item {
-			height: 198px;
 			width: 198px;
-			background-color:#497957;
+			aspect-ratio: 1/1;
+			background-color:$review_color;
 			border-radius: 35px;
 			border: 2px solid #00FF4A;
 			&:hover{
-				box-shadow: 2px 5px 10px #497957;
+				box-shadow: 2px 5px 10px $review_color;
+			}
+			@media screen and (max-width:1000px) {
+				width: 198px;			
 			}
 		}
 	}

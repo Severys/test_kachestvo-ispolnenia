@@ -2,7 +2,7 @@ body {
     font-family: "Montserrat";
     font-weight: 400;
     font-size: 28px;
-    color: white;
+    color: $text_color;
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
 }
 
 a {
-color: white;
+color: $text_color;
 text-decoration: none;
 &:hover{
     text-decoration: underline;
@@ -26,10 +26,10 @@ text-decoration: none;
     width: 262px;
     height: 58px;
     font-size: 24px;
-    color: white;
+    color: $text_color;
     text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black, 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 25px;
-    background-color: #FF4B4B;
+    background-color: $btn_color;
     box-shadow: 2px 5px 10px #497957;
 }
